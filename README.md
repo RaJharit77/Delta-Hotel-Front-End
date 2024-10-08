@@ -1,0 +1,70 @@
+# Delta-Hôtel-Front-End
+Ce projet est à propos de la restaurant nommé <mark>Delta Hôtel®</mark> en utilisant <mark>Vite JS et React JS et aussi TypeScript(Vite JS + React JS + TS)</mark> comme outils pour le front-end de ce site.
+
+### Description du projet
+Ceci est une repository pour l'interface utilisateur ou UI de mon projet personnel pendant une année de passage chez HEI(Haute École d'informatique).
+
+### L'idée générale du projet
+Ce projet est une inspiration de <mark>la maquette de notre site d'hôtel pendant notre examen</mark> en <mark>WEB</mark> et aussi la passion pour l'informatique de créer et donner une solution innovante pour la génération futur. 
+
+Le nom de la site de ce restaurant est insipiré par la mathématique, c'est le fameux delta(▲) ou plus précisement <mark>Delta Hôtel®</mark>. Tous le monde alors pose une question: "Ah ce nom de restaurant est vraiment bizarre ?". Oui, il est vraiment bizarre car il est insipiré par la math et c'est nouveau pour les oreilles des autres personnes parce que le nom delta(▲), on ne l'entend pas trop souvent sauf à l'école quand on fait le fameux math qui fait peur souvent les jeunes étudiants(es) à l'école car c'est trop compliqué xD.
+J'ai élaboré ce projet pendant un mois pour imaginer et envisager le style du site et ses différents composant, je n'ai pas de template mais j'ai regardé des sites d'hôtel différentes qui m'inspire le plus comme le site web de <mark>Radisson Blu et NovoTel</mark> par exemple et il y en a beaucoup... mais celle qui m'insipire le plus par rapport aux autres sites web d'hôtel.
+
+Non, ce site n'a rien avoir aux maths mais j'ai juste emprunter ce mot <mark>delta(▲)</mark> pour le site car je trouve que c'est vraiment formidable et aussi compatible pour mon projet et puis j'ai essayé de trouver un autre nom avant mais je n'ai pas trouvé :-D
+
+### Pour infos
+Si vous cherchez sur google le nom <mark>Delta Hôtel®</mark>, il y a un <mark>Delta Hôtel®</mark> qui se situe à Athènes Grèce. Et vous me 
+demandez alors que "Tu as copié le nom de l'hôtel qui se situe à Grèce, et tu change juste le coordonée tous et tous, n'est-ce-pas ?". Bah! Non,
+je n'ai jamais copié le nom de l'hôtel à Athènes, Grèce mais je suis juste inspiré et obsédé par le mot delta(▲) c'est pourquoi j'ai décidé de la 
+nommé comme ça mais il n'a rien avoir avec le resto à Grèce; j'ai juste une idéé en tête: "est-ce-que ce nom de l'hôtel que j'ai créé existe vraiment ?", pff!Puis il existe après avoir la recherche sur google xD. Or, j'ai juste emprunter leur carte à Athènes pour le contact car je n'ai pas encore un emplacement exacte pour l'hôtel à Madagascar et puis c'est juste une inspiration pour mon projet informatique :D.
+
+# React + TypeScript + Vite
+
+This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+
+Currently, two official plugins are available:
+
+- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
+- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+
+## Expanding the ESLint configuration
+
+If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+
+- Configure the top-level `parserOptions` property like this:
+
+```js
+export default tseslint.config({
+  languageOptions: {
+    // other options...
+    parserOptions: {
+      project: ['./tsconfig.node.json', './tsconfig.app.json'],
+      tsconfigRootDir: import.meta.dirname,
+    },
+  },
+})
+```
+
+- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
+- Optionally add `...tseslint.configs.stylisticTypeChecked`
+- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
+
+```js
+// eslint.config.js
+import react from 'eslint-plugin-react'
+
+export default tseslint.config({
+  // Set the react version
+  settings: { react: { version: '18.3' } },
+  plugins: {
+    // Add the react plugin
+    react,
+  },
+  rules: {
+    // other rules...
+    // Enable its recommended rules
+    ...react.configs.recommended.rules,
+    ...react.configs['jsx-runtime'].rules,
+  },
+})
+```
