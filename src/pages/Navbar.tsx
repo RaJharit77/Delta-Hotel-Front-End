@@ -29,7 +29,7 @@ const NavigationBar: React.FC = () => {
                     />
                     {!menuOpen && (
                         <span className="text-2xl font-bold text-creme ml-2 hover:text-or glow-button">
-                            Delta Restaurant
+                            Delta Hôtel
                         </span>
                     )}
                 </a>
@@ -84,7 +84,7 @@ const NavigationBar: React.FC = () => {
 
                         <a
                             href="#reservation"
-                            className="text-black bg-creme py-2 px-4 rounded hover:bg-or transition block text-center md:text-left mt-2 md:mt-0 relative glow-button"
+                            className="text-black bg-creme py-2 px-4 rounded hover:bg-or hover:text-black transition block text-center md:text-left mt-2 md:mt-0 relative glow-button"
                         >
                             Reservation
                         </a>
