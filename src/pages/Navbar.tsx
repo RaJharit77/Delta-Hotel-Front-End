@@ -20,16 +20,15 @@ const NavigationBar: React.FC = () => {
             }`}
         >
             <div className={`max-w-screen-xl mx-auto flex justify-between items-center p-4 ${menuOpen ? 'mt-10' : ''}`}>
-                <a href="https://delta-restaurant-madagascar.onrender.com/" className={`flex items-center ${menuOpen ? 'mt-4' : ''}`}>
-                    {/* Modification de la taille de l'image lorsque le menu est ouvert */}
+                <a href="#" className={`flex items-center ${menuOpen ? 'mt-4' : ''}`}>
                     <img 
                         src={logo} 
-                        alt="Delta Restaurant Logo" 
+                        alt="Delta Hotel Logo" 
                         className={`object-cover rounded-full transition-transform duration-300 ${menuOpen ? 'w-16 h-16' : 'w-14 h-14'}`} 
                     />
                     {!menuOpen && (
                         <span className="text-2xl font-bold text-creme ml-2 hover:text-or glow-button">
-                            Delta Hôtel
+                            Delta Hotel
                         </span>
                     )}
                 </a>
@@ -86,7 +85,7 @@ const NavigationBar: React.FC = () => {
                             href="#reservation"
                             className="text-black bg-creme py-2 px-4 rounded hover:bg-or hover:text-black transition block text-center md:text-left mt-2 md:mt-0 relative glow-button"
                         >
-                            Reservation
+                            Réservation
                         </a>
                     </div>
                 </div>
