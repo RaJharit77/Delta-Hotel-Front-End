@@ -24,18 +24,101 @@ const Services: React.FC = () => {
                     <p className="text-lg text-gray-300 mb-4">
                         Nos chambres et suites offrent un confort et une élégance inégalés, équipées des dernières technologies pour rendre votre séjour des plus agréables.
                     </p>
-                    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-                        {[...Array(6)].map((_, i) => (
-                            <div key={i} className="max-w-sm rounded overflow-hidden shadow-lg bg-white">
-                                <img className="w-full" src="/img/hebergement.jpg" alt={`Hébergement de luxe ${i + 1}`} />
-                                <div className="px-6 py-4">
-                                    <div className="font-bold text-xl mb-2">Chambres et suites luxueuses {i + 1}</div>
-                                    <p className="text-gray-700 text-base">
-                                        Un cadre raffiné avec des services haut de gamme pour un séjour inoubliable.
-                                    </p>
-                                </div>
+                    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
+                        <div className="max-w-sm rounded overflow-hidden shadow-lg bg-white">
+                            <img className="w-full" src="/img/hebergement1.jpg" alt="Chambre luxueuse" />
+                            <div className="px-6 py-4">
+                                <div className="font-bold text-xl mb-2">Suite Élite</div>
+                                <p className="text-gray-700 text-base">
+                                    Une suite luxueuse avec vue panoramique sur la ville.
+                                </p>
                             </div>
-                        ))}
+                        </div>
+                        <div className="max-w-sm rounded overflow-hidden shadow-lg bg-white">
+                            <img className="w-full" src="/img/hebergement2.jpg" alt="Chambre prestige" />
+                            <div className="px-6 py-4">
+                                <div className="font-bold text-xl mb-2">Chambre Prestige</div>
+                                <p className="text-gray-700 text-base">
+                                    Confort, élégance et service personnalisé pour un séjour prestigieux.
+                                </p>
+                            </div>
+                        </div>
+                        <div className="max-w-sm rounded overflow-hidden shadow-lg bg-white">
+                            <img className="w-full" src="/img/hebergement3.jpg" alt="Chambre luxe" />
+                            <div className="px-6 py-4">
+                                <div className="font-bold text-xl mb-2">Chambre Luxe</div>
+                                <p className="text-gray-700 text-base">
+                                    Chambre équipée de tous les services modernes avec une touche d'élégance.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6mb-12">
+                        <div className="max-w-sm rounded overflow-hidden shadow-lg bg-white">
+                            <img className="w-full" src="/img/hebergement4.jpg" alt="Chambre luxueuse" />
+                            <div className="px-6 py-4">
+                                <div className="font-bold text-xl mb-2">Suite Élite</div>
+                                <p className="text-gray-700 text-base">
+                                    Une suite luxueuse avec vue panoramique sur la ville.
+                                </p>
+                            </div>
+                        </div>
+                        <div className="max-w-sm rounded overflow-hidden shadow-lg bg-white">
+                            <img className="w-full" src="/img/hebergement5.jpg" alt="Chambre prestige" />
+                            <div className="px-6 py-4">
+                                <div className="font-bold text-xl mb-2">Chambre Prestige</div>
+                                <p className="text-gray-700 text-base">
+                                    Confort, élégance et service personnalisé pour un séjour prestigieux.
+                                </p>
+                            </div>
+                        </div>
+                        <div className="max-w-sm rounded overflow-hidden shadow-lg bg-white">
+                            <img className="w-full" src="/img/hebergement6.jpg" alt="Chambre luxe" />
+                            <div className="px-6 py-4">
+                                <div className="font-bold text-xl mb-2">Chambre Luxe</div>
+                                <p className="text-gray-700 text-base">
+                                    Chambre équipée de tous les services modernes avec une touche d'élégance.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                {/* Service de conciergerie */}
+                <div className="mb-12">
+                    <h2 className="text-3xl font-bold text-emerald-400 mb-6 text-center">Service de conciergerie</h2>
+                    <p className="text-lg text-gray-300 mb-4">
+                        Nos concierges dévoués sont à votre disposition pour vous aider avec des services personnalisés.
+                    </p>
+                    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                        <div className="max-w-sm rounded overflow-hidden shadow-lg bg-white">
+                            <img className="w-full" src="/img/conciergerie1.jpg" alt="Concierge personnalisé" />
+                            <div className="px-6 py-4">
+                                <div className="font-bold text-xl mb-2">Concierge Personnalisé</div>
+                                <p className="text-gray-700 text-base">
+                                    Bénéficiez de services sur mesure pour répondre à tous vos besoins durant votre séjour.
+                                </p>
+                            </div>
+                        </div>
+                        <div className="max-w-sm rounded overflow-hidden shadow-lg bg-white">
+                            <img className="w-full" src="/img/conciergerie2.jpg" alt="Réservations exclusives" />
+                            <div className="px-6 py-4">
+                                <div className="font-bold text-xl mb-2">Réservations Exclusives</div>
+                                <p className="text-gray-700 text-base">
+                                    Laissez-nous organiser vos réservations dans les restaurants et événements exclusifs.
+                                </p>
+                            </div>
+                        </div>
+                        <div className="max-w-sm rounded overflow-hidden shadow-lg bg-white">
+                            <img className="w-full" src="/img/conciergerie3.jpg" alt="Transferts privés" />
+                            <div className="px-6 py-4">
+                                <div className="font-bold text-xl mb-2">Transferts Privés</div>
+                                <p className="text-gray-700 text-base">
+                                    Profitez de nos services de transfert privé pour vos déplacements en toute sérénité.
+                                </p>
+                            </div>
+                        </div>
                     </div>
                 </div>
 
@@ -46,17 +129,33 @@ const Services: React.FC = () => {
                         Le restaurant Delta vous propose une expérience culinaire raffinée, avec une sélection de plats locaux et internationaux.
                     </p>
                     <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-                        {[...Array(6)].map((_, i) => (
-                            <div key={i} className="max-w-sm rounded overflow-hidden shadow-lg bg-white">
-                                <img className="w-full" src="/img/restauration.jpg" alt={`Service de restauration ${i + 1}`} />
-                                <div className="px-6 py-4">
-                                    <div className="font-bold text-xl mb-2">Expérience culinaire raffinée {i + 1}</div>
-                                    <p className="text-gray-700 text-base">
-                                        Savourez nos plats préparés par des chefs de renommée dans un cadre élégant.
-                                    </p>
-                                </div>
+                        <div className="max-w-sm rounded overflow-hidden shadow-lg bg-white">
+                            <img className="w-full" src="/img/restauration1.jpg" alt="Cuisine gastronomique" />
+                            <div className="px-6 py-4">
+                                <div className="font-bold text-xl mb-2">Cuisine Gastronomique</div>
+                                <p className="text-gray-700 text-base">
+                                    Un voyage culinaire avec des plats signature préparés par des chefs de renommée.
+                                </p>
                             </div>
-                        ))}
+                        </div>
+                        <div className="max-w-sm rounded overflow-hidden shadow-lg bg-white">
+                            <img className="w-full" src="/img/restauration2.jpg" alt="Buffet international" />
+                            <div className="px-6 py-4">
+                                <div className="font-bold text-xl mb-2">Buffet International</div>
+                                <p className="text-gray-700 text-base">
+                                    Une variété de plats internationaux pour satisfaire tous les goûts.
+                                </p>
+                            </div>
+                        </div>
+                        <div className="max-w-sm rounded overflow-hidden shadow-lg bg-white">
+                            <img className="w-full" src="/img/restauration3.jpg" alt="Dîner romantique" />
+                            <div className="px-6 py-4">
+                                <div className="font-bold text-xl mb-2">Dîner Romantique</div>
+                                <p className="text-gray-700 text-base">
+                                    Un cadre intimiste avec une ambiance romantique pour un dîner en tête à tête.
+                                </p>
+                            </div>
+                        </div>
                     </div>
                 </div>
 
@@ -67,64 +166,75 @@ const Services: React.FC = () => {
                         Détendez-vous et revitalisez votre corps et votre esprit dans notre spa de luxe.
                     </p>
                     <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-                        {[...Array(6)].map((_, i) => (
-                            <div key={i} className="max-w-sm rounded overflow-hidden shadow-lg bg-white">
-                                <img className="w-full" src="/img/spa.jpg" alt={`Spa et bien-être ${i + 1}`} />
-                                <div className="px-6 py-4">
-                                    <div className="font-bold text-xl mb-2">Relaxation et bien-être {i + 1}</div>
-                                    <p className="text-gray-700 text-base">
-                                        Offrez-vous un moment de détente avec nos soins de spa exclusifs.
-                                    </p>
-                                </div>
+                        <div className="max-w-sm rounded overflow-hidden shadow-lg bg-white">
+                            <img className="w-full" src="/img/spa1.jpg" alt="Massage relaxant" />
+                            <div className="px-6 py-4">
+                                <div className="font-bold text-xl mb-2">Massage Relaxant</div>
+                                <p className="text-gray-700 text-base">
+                                    Évacuez le stress avec un massage apaisant offert par nos experts.
+                                </p>
                             </div>
-                        ))}
+                        </div>
+                        <div className="max-w-sm rounded overflow-hidden shadow-lg bg-white">
+                            <img className="w-full" src="/img/spa2.jpg" alt="Soins du visage" />
+                            <div className="px-6 py-4">
+                                <div className="font-bold text-xl mb-2">Soins du Visage</div>
+                                <p className="text-gray-700 text-base">
+                                    Revitalisez votre peau avec nos traitements faciaux exclusifs.
+                                </p>
+                            </div>
+                        </div>
+                        <div className="max-w-sm rounded overflow-hidden shadow-lg bg-white">
+                            <img className="w-full" src="/img/spa3.jpg" alt="Bains thermaux" />
+                            <div className="px-6 py-4">
+                                <div className="font-bold text-xl mb-2">Bains Thermaux</div>
+                                <p className="text-gray-700 text-base">
+                                    Plongez dans des bains thermaux pour une expérience de détente totale.
+                                </p>
+                            </div>
+                        </div>
                     </div>
                 </div>
 
-                {/* Salles de conférence */}
+                {/* Conférences et événements */}
                 <div className="mb-12">
-                    <h2 className="text-3xl font-bold text-emerald-400 mb-6 text-center">Salles de conférence</h2>
+                    <h2 className="text-3xl font-bold text-emerald-400 mb-6 text-center">Conférences et événements</h2>
                     <p className="text-lg text-gray-300 mb-4">
-                        Notre hôtel dispose de plusieurs salles de conférence entièrement équipées pour vos événements privés et professionnels.
+                        Organisez vos conférences, banquets, ou événements privés dans nos espaces modernes et entièrement équipés.
                     </p>
                     <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-                        {[...Array(6)].map((_, i) => (
-                            <div key={i} className="max-w-sm rounded overflow-hidden shadow-lg bg-white">
-                                <img className="w-full" src="/img/conference.jpg" alt={`Salles de conférence ${i + 1}`} />
-                                <div className="px-6 py-4">
-                                    <div className="font-bold text-xl mb-2">Événements sur mesure {i + 1}</div>
-                                    <p className="text-gray-700 text-base">
-                                        Organisez vos réunions et séminaires dans un cadre moderne et fonctionnel.
-                                    </p>
-                                </div>
+                        <div className="max-w-sm rounded overflow-hidden shadow-lg bg-white">
+                            <img className="w-full" src="/img/conference1.jpg" alt="Salle de conférence" />
+                            <div className="px-6 py-4">
+                                <div className="font-bold text-xl mb-2">Salle de Conférence</div>
+                                <p className="text-gray-700 text-base">
+                                    Des salles de conférence modernes avec des équipements de haute technologie.
+                                </p>
                             </div>
-                        ))}
-                    </div>
-                </div>
-
-                {/* Service de conciergerie */}
-                <div className="mb-12">
-                    <h2 className="text-3xl font-bold text-emerald-400 mb-6 text-center">Service de conciergerie</h2>
-                    <p className="text-lg text-gray-300 mb-4">
-                        Notre équipe de conciergerie est à votre disposition pour organiser vos excursions, transports et bien plus.
-                    </p>
-                    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-                        {[...Array(6)].map((_, i) => (
-                            <div key={i} className="max-w-sm rounded overflow-hidden shadow-lg bg-white">
-                                <img className="w-full" src="/img/conciergerie.jpg" alt={`Service de conciergerie ${i + 1}`} />
-                                <div className="px-6 py-4">
-                                    <div className="font-bold text-xl mb-2">Services personnalisés {i + 1}</div>
-                                    <p className="text-gray-700 text-base">
-                                        Laissez notre équipe s'occuper de vos besoins pendant votre séjour.
-                                    </p>
-                                </div>
+                        </div>
+                        <div className="max-w-sm rounded overflow-hidden shadow-lg bg-white">
+                            <img className="w-full" src="/img/conference2.jpg" alt="Salle de réunion" />
+                            <div className="px-6 py-4">
+                                <div className="font-bold text-xl mb-2">Salle de Réunion</div>
+                                <p className="text-gray-700 text-base">
+                                    Un cadre professionnel pour vos réunions d'affaires importantes.
+                                </p>
                             </div>
-                        ))}
+                        </div>
+                        <div className="max-w-sm rounded overflow-hidden shadow-lg bg-white">
+                            <img className="w-full" src="/img/conference3.jpg" alt="Banquets" />
+                            <div className="px-6 py-4">
+                                <div className="font-bold text-xl mb-2">Banquets Privés</div>
+                                <p className="text-gray-700 text-base">
+                                    Des espaces élégants pour vos banquets ou événements privés.
+                                </p>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     );
-};
+}
 
 export default Services;
