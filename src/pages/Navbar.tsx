@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import logo from '/img/delta.png';
+import logo from '../assets/img/delta.png';
 
 const NavigationBar: React.FC = () => {
     const [isScrolled, setIsScrolled] = useState<boolean>(false);
