@@ -43,7 +43,9 @@ const Services: React.FC = () => {
                     </p>
                     <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mb-12 justify-center items-center">
                         {chambresAffichees.map((chambre, index) => (
-                            <div key={index} className="max-w-sm rounded-xl overflow-hidden shadow-lg bg-emerald-600 mx-auto">
+                            <div key={index} className="max-w-sm rounded-xl overflow-hidden shadow-lg bg-emerald-600 mx-auto 
+                            transform transition duration-300 ease-in-out hover:scale-105 hover:shadow-2xl cursor-pointer"
+                            >
                                 <img className="w-full" src={chambre.img} alt={chambre.titre} />
                                 <div className="px-6 py-4">
                                     <div className="font-bold text-xl mb-2">{chambre.titre}</div>
@@ -73,7 +75,9 @@ const Services: React.FC = () => {
                         Nos concierges dévoués sont à votre disposition pour vous aider avec des services personnalisés.
                     </p>
                     <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mb-12 justify-center items-center">
-                        <div className="max-w-sm rounded-xl overflow-hidden shadow-lg bg-emerald-600 mx-auto">
+                        <div className="max-w-sm rounded-xl overflow-hidden shadow-lg bg-emerald-600 mx-auto 
+                        transform transition duration-300 ease-in-out hover:scale-105 hover:shadow-2xl cursor-pointer"
+                        >
                             <img className="w-full" src="/img/conciergerie1.jpg" alt="Concierge personnalisé" />
                             <div className="px-6 py-4">
                                 <div className="font-bold text-xl mb-2">Concierge Personnalisé</div>
@@ -82,7 +86,9 @@ const Services: React.FC = () => {
                                 </p>
                             </div>
                         </div>
-                        <div className="max-w-sm rounded-xl overflow-hidden shadow-lg bg-emerald-600 mx-auto">
+                        <div className="max-w-sm rounded-xl overflow-hidden shadow-lg bg-emerald-600 mx-auto 
+                        transform transition duration-300 ease-in-out hover:scale-105 hover:shadow-2xl cursor-pointer"
+                        >
                             <img className="w-full" src="/img/conciergerie2.jpg" alt="Réservations exclusives" />
                             <div className="px-6 py-4">
                                 <div className="font-bold text-xl mb-2">Réservations Exclusives</div>
@@ -91,7 +97,9 @@ const Services: React.FC = () => {
                                 </p>
                             </div>
                         </div>
-                        <div className="max-w-sm rounded-xl overflow-hidden shadow-lg bg-emerald-600 mx-auto">
+                        <div className="max-w-sm rounded-xl overflow-hidden shadow-lg bg-emerald-600 mx-auto 
+                        transform transition duration-300 ease-in-out hover:scale-105 hover:shadow-2xl cursor-pointer"
+                        >
                             <img className="w-full" src="/img/conciergerie3.jpg" alt="Transferts privés" />
                             <div className="px-6 py-4">
                                 <div className="font-bold text-xl mb-2">Transferts Privés</div>
@@ -110,7 +118,9 @@ const Services: React.FC = () => {
                         Le restaurant Delta vous propose une expérience culinaire raffinée, avec une sélection de plats locaux et internationaux.
                     </p>
                     <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mb-12 justify-center items-center">
-                        <div className="max-w-sm rounded-xl overflow-hidden shadow-lg bg-emerald-600 mx-auto">
+                        <div className="max-w-sm rounded-xl overflow-hidden shadow-lg bg-emerald-600 mx-auto 
+                        transform transition duration-300 ease-in-out hover:scale-105 hover:shadow-2xl cursor-pointer"
+                        >
                             <img className="w-full" src="/img/restauration1.jpg" alt="Cuisine gastronomique" />
                             <div className="px-6 py-4">
                                 <div className="font-bold text-xl mb-2">Cuisine Gastronomique</div>
@@ -119,7 +129,9 @@ const Services: React.FC = () => {
                                 </p>
                             </div>
                         </div>
-                        <div className="max-w-sm rounded-xl overflow-hidden shadow-lg bg-emerald-600 mx-auto">
+                        <div className="max-w-sm rounded-xl overflow-hidden shadow-lg bg-emerald-600 mx-auto 
+                        transform transition duration-300 ease-in-out hover:scale-105 hover:shadow-2xl cursor-pointer"
+                        >
                             <img className="w-full" src="/img/restauration2.jpg" alt="Buffet international" />
                             <div className="px-6 py-4">
                                 <div className="font-bold text-xl mb-2">Buffet International</div>
@@ -128,7 +140,9 @@ const Services: React.FC = () => {
                                 </p>
                             </div>
                         </div>
-                        <div className="max-w-sm rounded-xl overflow-hidden shadow-lg bg-emerald-600 mx-auto">
+                        <div className="max-w-sm rounded-xl overflow-hidden shadow-lg bg-emerald-600 mx-auto 
+                        transform transition duration-300 ease-in-out hover:scale-105 hover:shadow-2xl cursor-pointer"
+                        >
                             <img className="w-full" src="/img/restauration3.jpg" alt="Dîner romantique" />
                             <div className="px-6 py-4">
                                 <div className="font-bold text-xl mb-2">Dîner Romantique</div>
@@ -158,7 +172,9 @@ const Services: React.FC = () => {
                         Détendez-vous et revitalisez votre corps et votre esprit dans notre spa de luxe.
                     </p>
                     <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mb-12 justify-center items-center">
-                        <div className="max-w-sm rounded-xl overflow-hidden shadow-lg bg-emerald-600 mx-auto">
+                        <div className="max-w-sm rounded-xl overflow-hidden shadow-lg bg-emerald-600 mx-auto 
+                        transform transition duration-300 ease-in-out hover:scale-105 hover:shadow-2xl cursor-pointer"
+                        >
                             <img className="w-full" src="/img/spa1.jpg" alt="Massage relaxant" />
                             <div className="px-6 py-4">
                                 <div className="font-bold text-xl mb-2">Massage Relaxant</div>
@@ -167,7 +183,9 @@ const Services: React.FC = () => {
                                 </p>
                             </div>
                         </div>
-                        <div className="max-w-sm rounded-xl overflow-hidden shadow-lg bg-emerald-600 mx-auto">
+                        <div className="max-w-sm rounded-xl overflow-hidden shadow-lg bg-emerald-600 mx-auto
+                        transform transition duration-300 ease-in-out hover:scale-105 hover:shadow-2xl cursor-pointer"
+                        >
                             <img className="w-full" src="/img/spa2.jpg" alt="Soins du visage" />
                             <div className="px-6 py-4">
                                 <div className="font-bold text-xl mb-2">Soins du Visage</div>
@@ -176,7 +194,9 @@ const Services: React.FC = () => {
                                 </p>
                             </div>
                         </div>
-                        <div className="max-w-sm rounded-xl overflow-hidden shadow-lg bg-emerald-600 mx-auto">
+                        <div className="max-w-sm rounded-xl overflow-hidden shadow-lg bg-emerald-600 mx-auto 
+                        transform transition duration-300 ease-in-out hover:scale-105 hover:shadow-2xl cursor-pointer"
+                        >
                             <img className="w-full" src="/img/spa3.jpg" alt="Bains thermaux" />
                             <div className="px-6 py-4">
                                 <div className="font-bold text-xl mb-2">Bains Thermaux</div>
@@ -195,7 +215,9 @@ const Services: React.FC = () => {
                         Organisez vos conférences, banquets, ou événements privés dans nos espaces modernes et entièrement équipés.
                     </p>
                     <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mb-12 justify-center items-center">
-                        <div className="max-w-sm rounded-xl overflow-hidden shadow-lg bg-emerald-600 mx-auto">
+                        <div className="max-w-sm rounded-xl overflow-hidden shadow-lg bg-emerald-600 mx-auto 
+                        transform transition duration-300 ease-in-out hover:scale-105 hover:shadow-2xl cursor-pointer"
+                        >
                             <img className="w-full" src="/img/conference1.jpg" alt="Salle de conférence" />
                             <div className="px-6 py-4">
                                 <div className="font-bold text-xl mb-2">Salle de Conférence</div>
@@ -204,7 +226,9 @@ const Services: React.FC = () => {
                                 </p>
                             </div>
                         </div>
-                        <div className="max-w-sm rounded-xl overflow-hidden shadow-lg bg-emerald-600 mx-auto">
+                        <div className="max-w-sm rounded-xl overflow-hidden shadow-lg bg-emerald-600 mx-auto 
+                        transform transition duration-300 ease-in-out hover:scale-105 hover:shadow-2xl cursor-pointer"
+                        >
                             <img className="w-full" src="/img/conference2.jpg" alt="Salle de réunion" />
                             <div className="px-6 py-4">
                                 <div className="font-bold text-xl mb-2">Salle de Réunion</div>
@@ -213,7 +237,9 @@ const Services: React.FC = () => {
                                 </p>
                             </div>
                         </div>
-                        <div className="max-w-sm rounded-xl overflow-hidden shadow-lg bg-emerald-600 mx-auto">
+                        <div className="max-w-sm rounded-xl overflow-hidden shadow-lg bg-emerald-600 mx-auto 
+                        transform transition duration-300 ease-in-out hover:scale-105 hover:shadow-2xl cursor-pointer"
+                        >
                             <img className="w-full" src="/img/conference3.jpg" alt="Banquets" />
                             <div className="px-6 py-4">
                                 <div className="font-bold text-xl mb-2">Banquets Privés</div>
