@@ -1,8 +1,24 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { HiArrowRight } from 'react-icons/hi';
 import backgroundImage from '../assets/img/services.jpg';
-
 const Services: React.FC = () => {
+    const [showMore, setShowMore] = useState(false);
+
+    // Listes de chambres
+    const chambres = [
+        { img: '/img/hebergement1.jpg', titre: 'Chambre Prestige/Deluxe', description: 'Confort, élégance et service personnalisé pour un séjour prestigieux.' },
+        { img: '/img/hebergement2.jpg', titre: 'Chambre Luxe', description: 'Chambre équipée de tous les services modernes avec une touche d\'élégance.' },
+        { img: '/img/hebergement3.jpg', titre: 'Suite Élite', description: 'Une suite luxueuse avec vue panoramique sur la ville.' },
+        { img: '/img/hebergement4.jpg', titre: 'Chambre Classique/Deluxe', description: 'Décoration raffinée avec des équipements haut de gamme.' },
+        { img: '/img/hebergement7.jpg', titre: 'Suite Junior', description: 'Un espace ouvert alliant chambre et salon.' },
+        { img: '/img/hebergement6.jpg', titre: 'Chambre Exécutive', description: 'Espace de travail avec accès à un salon exécutif.' },
+        { img: '/img/suitePresidentielle.jpg', titre: 'Suite Présidentielle', description: 'Suite avec services exclusifs comme un majordome personnel.' },
+        { img: '/img/royale.jpg', titre: 'Suite Royale', description: 'Plusieurs chambres, salle de gym et terrasse panoramique.' },
+        { img: '/img/hebergement9.jpg', titre: 'Penthouse', description: 'Terrasse privée et jacuzzi avec vue spectaculaire.' },
+    ];
+
+    const chambresAffichees = showMore ? chambres : chambres.slice(0, 3);
+
     return (
         <div
             id='services'
@@ -23,100 +39,30 @@ const Services: React.FC = () => {
                 <div className="mb-12">
                     <h2 className="text-3xl font-bold text-emerald-400 mb-6 text-center">Hébergement de luxe</h2>
                     <p className="text-lg text-gray-300 mb-4">
-                        Nos chambres et suites offrent un confort et une élégance inégalés, équipées des dernières technologies pour rendre votre séjour des plus agréables.
+                        Nos chambres et suites offrent un confort et une élégance inégalés.
                     </p>
                     <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mb-12 justify-center items-center">
-                        <div className="max-w-sm rounded-xl overflow-hidden shadow-lg bg-emerald-600 mx-auto">
-                            <img className="w-full" src="/img/hebergement1.jpg" alt="Chambre Prestige/Deluxe" />
-                            <div className="px-6 py-4">
-                                <div className="font-bold text-xl mb-2">Chambre Prestige/Deluxe</div>
-                                <p className="text-black text-base">
-                                    Confort, élégance et service personnalisé pour un séjour prestigieux.
-                                </p>
+                        {chambresAffichees.map((chambre, index) => (
+                            <div key={index} className="max-w-sm rounded-xl overflow-hidden shadow-lg bg-emerald-600 mx-auto">
+                                <img className="w-full" src={chambre.img} alt={chambre.titre} />
+                                <div className="px-6 py-4">
+                                    <div className="font-bold text-xl mb-2">{chambre.titre}</div>
+                                    <p className="text-black text-base">{chambre.description}</p>
+                                </div>
                             </div>
-                        </div>
-                        <div className="max-w-sm rounded-xl overflow-hidden shadow-lg bg-emerald-600 mx-auto">
-                            <img className="w-full" src="/img/hebergement2.jpg" alt="Chambre Luxe" />
-                            <div className="px-6 py-4">
-                                <div className="font-bold text-xl mb-2"> Chambre Luxe</div>
-                                <p className="text-black text-base">
-                                    Chambre équipée de tous les services modernes avec une touche d'élégance.
-                                </p>
-                            </div>
-                        </div>
-                        <div className="max-w-sm rounded-xl overflow-hidden shadow-lg bg-emerald-600 mx-auto">
-                            <img className="w-full" src="/img/hebergement3.jpg" alt="Suite Élite" />
-                            <div className="px-6 py-4">
-                                <div className="font-bold text-xl mb-2">Suite Élite </div>
-                                <p className="text-black text-base">
-                                    Une suite luxueuse avec vue panoramique sur la ville.
-                                </p>
-                            </div>
-                        </div>
+                        ))}
                     </div>
 
-                    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mb-12 justify-center items-center">
-                        <div className="max-w-sm rounded-xl overflow-hidden shadow-lg bg-emerald-600 mx-auto">
-                            <img className="w-full" src="/img/hebergement4.jpg" alt="Chambre Classique/Deluxe" />
-                            <div className="px-6 py-4">
-                                <div className="font-bold text-xl mb-2">Chambre Classique/Deluxe</div>
-                                <p className="text-black text-base">
-                                    Les chambres proposent une décoration raffinée avec des équipements haut de gamme,
-                                    tels que des lits king-size et des salles de bains en marbre.
-                                </p>
-                            </div>
-                        </div>
-                        <div className="max-w-sm rounded-xl overflow-hidden shadow-lg bg-emerald-600 mx-auto">
-                            <img className="w-full" src="/img/hebergement7.jpg" alt="Suite Junior" />
-                            <div className="px-6 py-4">
-                                <div className="font-bold text-xl mb-2">Suite Junior</div>
-                                <p className="text-black text-base">
-                                    La suite junior propose un espace ouvert alliant chambre et salon, avec une grande salle de bain
-                                    et parfois un balcon ou une terrasse privée.
-                                </p>
-                            </div>
-                        </div>
-                        <div className="max-w-sm rounded-xl overflow-hidden shadow-lg bg-emerald-600 mx-auto">
-                            <img className="w-full" src="/img/hebergement6.jpg" alt="Chambre exécutive" />
-                            <div className="px-6 py-4">
-                                <div className="font-bold text-xl mb-2">Chambre Exécutive</div>
-                                <p className="text-black text-base">
-                                    Les chambres exécutives offrent des équipements supplémentaires,
-                                    comme un espace de travail et un accès à un salon exécutif.
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mb-12 justify-center items-center">
-                        <div className="max-w-sm rounded-xl overflow-hidden shadow-lg bg-emerald-600 mx-auto">
-                            <img className="w-full" src="/img/suitePresidentielle.jpg" alt="Suite Présidentielle" />
-                            <div className="px-6 py-4">
-                                <div className="font-bold text-xl mb-2">Suite Présidentielle</div>
-                                <p className="text-black text-base">
-                                    La suite présidentielle offre plusieurs pièces et des services exclusifs, comme un majordome personnel et un accès VIP.
-                                </p>
-                            </div>
-                        </div>
-                        <div className="max-w-sm rounded-xl overflow-hidden shadow-lg bg-emerald-600 mx-auto">
-                            <img className="w-full" src="/img/royale.jpg" alt="Suite Royale" />
-                            <div className="px-6 py-4">
-                                <div className="font-bold text-xl mb-2">Suite Royale</div>
-                                <p className="text-black text-base">
-                                    La suite royale offre plusieurs chambres, des salles de bains avec spa, une salle de cinéma,
-                                    une salle de gym, majordome privé, une terrasse panoramique et des services sur mesure.
-                                </p>
-                            </div>
-                        </div>
-                        <div className="max-w-sm rounded-xl overflow-hidden shadow-lg bg-emerald-600 mx-auto">
-                            <img className="w-full" src="/img/hebergement9.jpg" alt="Penthouse" />
-                            <div className="px-6 py-4">
-                                <div className="font-bold text-xl mb-2">Penthouse</div>
-                                <p className="text-black text-base">
-                                    Le penthouse propose une vue spectaculaire et des espaces luxueux avec une terrasse privée et un jacuzzi.
-                                </p>
-                            </div>
-                        </div>
+                    <div className="text-center">
+                        <button
+                            onClick={() => setShowMore(!showMore)}
+                            className="inline-flex items-center px-6 py-3 border border-transparent 
+                            rounded-md shadow-sm text-base font-medium text-black hover:text-black bg-emerald-600 
+                            hover:bg-emerald-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-emerald-500"
+                        >
+                            {showMore ? 'Voir moins' : 'Voir plus'}
+                            <HiArrowRight className={`ml-2 transition-transform ${showMore ? '-rotate-90' : ''}`} />
+                        </button>
                     </div>
                 </div>
 
