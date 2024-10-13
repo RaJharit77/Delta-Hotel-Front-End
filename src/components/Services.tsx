@@ -21,7 +21,7 @@ const Services: React.FC = () => {
 
     return (
         <div
-            id='services'
+            id="services"
             className="relative bg-cover bg-center text-noir py-12 px-6 sm:px-4 lg:px-24"
             style={{ backgroundImage: `url(${backgroundImage})` }}
         >
@@ -125,7 +125,7 @@ const Services: React.FC = () => {
                             <div className="px-6 py-4">
                                 <div className="font-bold text-xl mb-2">Cuisine Gastronomique</div>
                                 <p className="text-gray-black text-base">
-                                    Un voyage culinaire avec des plats signature préparés par des chefs de renommée.
+                                    Un voyage culinaire avec des plats signature préparés par des chefs de renommée nationale ou mondiale.
                                 </p>
                             </div>
                         </div>
@@ -159,7 +159,7 @@ const Services: React.FC = () => {
                         rounded-md shadow-sm text-base font-medium text-black hover:text-black bg-emerald-600 
                         hover:bg-emerald-700 focus:outline -none focus:ring-2 focus:ring-offset-2 focus:ring-emerald-500"
                         >
-                            Voir notre restaurant
+                            Visitez notre restaurant
                             <HiArrowRight className="ml-2 -mr-1" aria-hidden="true" />
                         </a>
                     </div>

@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 
-const heroImage = '/img/luxirious.jpg';
+const heroImage = '/img/luxiriousH.jpg';
 
 const Accueil: React.FC = () => {
     const [opacity, setOpacity] = useState<number>(0.5);
