@@ -4,6 +4,8 @@ import backgroundImage from '../assets/img/services.jpg';
 const Services: React.FC = () => {
     const [showMore, setShowMore] = useState(false);
 
+    const [showAllOtherServices, setShowAllOtherServices] = useState(false);
+
     // Listes de chambres
     const chambres = [
         { img: '/img/hebergement1.jpg', titre: 'Chambre Prestige/Deluxe', description: 'Confort, élégance et service personnalisé pour un séjour prestigieux.' },
@@ -18,6 +20,17 @@ const Services: React.FC = () => {
     ];
 
     const chambresAffichees = showMore ? chambres : chambres.slice(0, 3);
+
+    const autresServices = [
+        { img: '/img/sport.jpg', titre: 'Salle de Fitness et équipements sportifs', description: 'Installations modernes pour les entraînements, avec parfois des coachs personnels pour une expérience de bien-être complète.' },
+        { img: '/img/piscines.jpg', titre: 'Piscine', description: 'Détendez-vous au bord de notre piscine extérieure chauffée, dans un cadre luxueux. Profitez d’un service de cocktails rafraîchissants tout en admirant une vue imprenable sur le paysage environnant.' },
+        { img: '/img/serviceChambre.jpg', titre: 'Service en chambre 24h/24', description: 'Bénéficiez d\'un service en chambre 24h/24 pour déguster des plats raffinés et des boissons rafraîchissantes dans le confort de votre chambre, répondant à toutes vos envies.' },
+        { img: '/img/wifi.jpg', titre: 'WiFi Gratuit', description: 'Restez connecté grâce à notre connexion WiFi haut débit gratuite, permettant aux clients d\'accéder à Internet, offrant ainsi une connexion rapide et pratique pendant votre séjour.' },
+        { img: '/img/loisir.jpg', titre: 'Espace de Loisirs', description: 'Un espace dédié à la détente et aux activités récréatives offrant des installations variées telles que des jeux, des espaces de divertissement permettant aux clients de se divertir.' },
+        { img: '/img/voiturier.jpg', titre: 'Service de voiturier et parking privé', description: 'Confiez votre véhicule à notre personnel qui le gare et le récupère à votre demande, assurant ainsi confort et sécurité.' },
+    ];
+
+    const servicesAffiches = showAllOtherServices ? autresServices : autresServices.slice(0, 3);
 
     return (
         <div
@@ -253,79 +266,33 @@ const Services: React.FC = () => {
 
                 {/* Autres Services */}
                 <div className="mb-12">
-                    <h2 className="text-3xl font-bold text-emerald-400 mb-7 text-center">Autres Services</h2>
+                    <h2 className="text-3xl font-bold text-emerald-400 mb-6 text-center">Autres Services</h2>
                     <p className="text-lg text-gray-300 mb-7">
-                        Profitez également de nos autres services pour agrémenter votre séjour.
+                    Découvrez notre service exclusif qui s'adapte à vos besoin, pour rendre votre séjour mémorable et sur mesure.
                     </p>
                     <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mb-12 justify-center items-stretch">
-                        <div className="max-w-sm rounded-xl overflow-hidden shadow-lg bg-emerald-600 mx-auto 
-                        transform transition duration-300 ease-in-out hover:scale-105 hover:shadow-2xl cursor-pointer"
-                        >
-                            <img className="w-full h-64 object-cover" src="/img/loisir.jpg" alt="Espace de loisir" />
-                            <div className="px-6 py-4">
-                                <div className="font-bold text-xl mb-2">Espace de Loisirs</div>
-                                <p className="text-black text-base">
-                                    Un espace dédié à la détente et aux activités récréatives.
-                                </p>
+                        {servicesAffiches.map((service, index) => (
+                            <div key={index} className="max-w-sm rounded-xl overflow-hidden shadow-lg bg-emerald-600 mx-auto 
+                            transform transition duration-300 ease-in-out hover:scale-105 hover:shadow-2xl cursor-pointer">
+                                <img className="w-full h-64 object-cover" src={service.img} alt={service.titre} />
+                                <div className="px-6 py-4">
+                                    <div className="font-bold text-xl mb-2">{service.titre}</div>
+                                    <p className="text-black text-base">{service.description}</p>
+                                </div>
                             </div>
-                        </div>
-                        <div className="max-w-sm rounded-xl overflow-hidden shadow-lg bg-emerald-600 mx-auto 
-                        transform transition duration-300 ease-in-out hover:scale-105 hover:shadow-2xl cursor-pointer"
+                        ))}
+                    </div>
+
+                    <div className="text-center">
+                        <button
+                            onClick={() => setShowAllOtherServices(!showAllOtherServices)}
+                            className="inline-flex items-center px-6 py-3 border border-transparent 
+                            rounded-md shadow-sm text-base font-medium text-black hover:text-black bg-emerald-600 
+                            hover:bg-emerald-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-emerald-500"
                         >
-                            <img className="w-full h-64 object-cover" src="/img/piscines.jpg" alt="Piscine" />
-                            <div className="px-6 py-4">
-                                <div className="font-bold text-xl mb-2">Piscine</div>
-                                <p className="text-black text-base">
-                                    Détendez-vous au bord de notre piscine extérieure chauffée.
-                                </p>
-                            </div>
-                        </div>
-                        <div className="max-w-sm rounded-xl overflow-hidden shadow-lg bg-emerald-600 mx-auto 
-                        transform transition duration-300 ease-in-out hover:scale-105 hover:shadow-2xl cursor-pointer"
-                        >
-                            <img className="w-full h-64 object-cover" src="/img/detente.jpg" alt="Espace de détente" />
-                            <div className="px-6 py-4">
-                                <div className="font-bold text-xl mb-2">Espace de Détente</div>
-                                <p className="text-black text-base">
-                                    Un espace calme pour vous relaxer et vous ressourcer.
-                                </p>
-                            </div>
-                        </div>
-                        <div className="max-w-sm rounded-xl overflow-hidden shadow-lg bg-emerald-600 mx-auto 
-                        transform transition duration-300 ease-in-out hover:scale-105 hover:shadow-2xl cursor-pointer"
-                        >
-                            <img className="w-full h-72 object-cover" src="/img/wifi.jpg" alt="WiFi gratuit" />
-                            <div className="px-6 py-4">
-                                <div className="font-bold text-xl mb-2">WiFi Gratuit</div>
-                                <p className="text-black text-base">
-                                    Restez connecté grâce à notre connexion WiFi haut débit gratuite,
-                                    offrant ainsi une connexion rapide et pratique pendant votre séjour.
-                                </p>
-                            </div>
-                        </div>
-                        <div className="max-w-sm rounded-xl overflow-hidden shadow-lg bg-emerald-600 mx-auto 
-                        transform transition duration-300 ease-in-out hover:scale-105 hover:shadow-2xl cursor-pointer"
-                        >
-                            <img className="w-full h-64 object-cover" src="/img/sport.jpg" alt="salle de fitness et équipements sportifis" />
-                            <div className="px-6 py-4">
-                                <div className="font-bold text-xl mb-2">Salle de Fitness et équipements sportifs</div>
-                                <p className="text-black text-base">
-                                    Installations modernes pour les entraînements, avec parfois des coachs personnels
-                                    pour une expérience de bien-être complète.
-                                </p>
-                            </div>
-                        </div>
-                        <div className="max-w-sm rounded-xl overflow-hidden shadow-lg bg-emerald-600 mx-auto 
-                        transform transition duration-300 ease-in-out hover:scale-105 hover:shadow-2xl cursor-pointer"
-                        >
-                            <img className="w-full h-64 object-cover" src="/img/voiturier.jpg" alt="service de voiturier" />
-                            <div className="px-6 py-4">
-                                <div className="font-bold text-xl mb-2">Service de voiturier et parking privé</div>
-                                <p className="text-black text-base">
-                                Confiez votre véhicule à notre personnel qui le gare et le récupère à votre demande, assurant ainsi confort et sécurité.
-                                </p>
-                            </div>
-                        </div>
+                            {showAllOtherServices ? 'Voir moins' : 'Voir les autres services'}
+                            <HiArrowRight className={`ml-2 transition-transform ${showAllOtherServices ? '-rotate-90' : ''}`} />
+                        </button>
                     </div>
                 </div>
             </div >
