@@ -59,22 +59,22 @@ const Services: React.FC = () => {
             description: "Plongez dans des bains thermaux pour une expérience de détente totale.",
         },
         {
-            imgSrc: "/img/spa.jpg",
-            alt: "Soins de visage",
-            title: "Soins de visage",
+            imgSrc: "/img/spa4.jpg",
+            alt: "Soins du corps",
+            title: "Soins du corps",
             description: "Gommages, enveloppements corporels et soins détox pour revitaliser et nourrir la peau.",
         },
         {
-            imgSrc: "/img/spa.jpg",
+            imgSrc: "/img/spa5.jpg",
             alt: "Manucure et Pédicure",
             title: "Manucure et Pédicure",
-            description: "Soins des ongles et beauté des mains et pieds.",
+            description: "Soins des ongles et beauté des mains et pieds pour une expérience de bien-être complète.",
         },
         {
-            imgSrc: "/img/spa.jpg",
+            imgSrc: "/img/spa6.jpg",
             alt: "Rituels bien-être",
             title: "Rituels bien-être",
-            description: "Expériences complètes alliant différents soins pour un bien-être holistique.",
+            description: "Expériences complètes alliant différents soins pour un bien-être holistique pour harmoniser le corps et l'esprit ",
         },
     ];
 
@@ -108,13 +108,13 @@ const Services: React.FC = () => {
         },
         {
             title: 'Assistance shopping',
-            description: 'Recommandations de boutiques de luxe et services de personnal shopper.',
+            description: 'Recommandations de boutiques de luxe et services de personnal shopper, offrant une expérience de shopping sur mesure',
             imgSrc: '/img/conciergerie.jpg',
             alt: 'Assistance shopping'
         },
         {
             title: 'Excursions et visites guidées',
-            description: 'Planification de tours privés ou excursions locales.',
+            description: 'Planification de tours privés ou excursions locales, en personnalisant votre itinéraire selon vos intérêts et préférences.',
             imgSrc: '/img/conciergerie.jpg',
             alt: 'Excursions et visites guidées'
         },
