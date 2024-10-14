@@ -6,6 +6,8 @@ const Services: React.FC = () => {
 
     const [showAllOtherServices, setShowAllOtherServices] = useState(false);
 
+    const [showAllConciergerie, setShowAllConciergerie] = useState(false);
+
     // Listes de chambres
     const chambres = [
         { img: '/img/hebergement1.jpg', titre: 'Chambre Prestige/Deluxe', description: 'Confort, élégance et service personnalisé pour un séjour prestigieux.' },
@@ -21,6 +23,7 @@ const Services: React.FC = () => {
 
     const chambresAffichees = showMore ? chambres : chambres.slice(0, 3);
 
+    //Listes des autres services
     const autresServices = [
         { img: '/img/sport.jpg', titre: 'Salle de Fitness et équipements sportifs', description: 'Installations modernes pour les entraînements, avec parfois des coachs personnels pour une expérience de bien-être complète.' },
         { img: '/img/piscines.jpg', titre: 'Piscine', description: 'Détendez-vous au bord de notre piscine extérieure chauffée, dans un cadre luxueux. Profitez d’un service de cocktails rafraîchissants tout en admirant une vue imprenable sur le paysage environnant.' },
@@ -31,6 +34,93 @@ const Services: React.FC = () => {
     ];
 
     const servicesAffiches = showAllOtherServices ? autresServices : autresServices.slice(0, 3);
+
+    // Utilisation de l'état pour gérer le nombre de cartes affichées
+    const [showAllSpa, setShowAllSpa] = useState(false);
+
+    // Liste des cartes
+    const spaCards = [
+        {
+            imgSrc: "/img/spa1.jpg",
+            alt: "Massage relaxant",
+            title: "Massage Relaxant",
+            description: "Évacuez le stress avec un massage apaisant offert par nos experts.",
+        },
+        {
+            imgSrc: "/img/spa2.jpg",
+            alt: "Soins du visage",
+            title: "Soins du Visage",
+            description: "Revitalisez votre peau avec nos traitements faciaux exclusifs.",
+        },
+        {
+            imgSrc: "/img/spa3.jpg",
+            alt: "Bains thermaux",
+            title: "Bains Thermaux",
+            description: "Plongez dans des bains thermaux pour une expérience de détente totale.",
+        },
+        {
+            imgSrc: "/img/spa.jpg",
+            alt: "Soins de visage",
+            title: "Soins de visage",
+            description: "Gommages, enveloppements corporels et soins détox pour revitaliser et nourrir la peau.",
+        },
+        {
+            imgSrc: "/img/spa.jpg",
+            alt: "Manucure et Pédicure",
+            title: "Manucure et Pédicure",
+            description: "Soins des ongles et beauté des mains et pieds.",
+        },
+        {
+            imgSrc: "/img/spa.jpg",
+            alt: "Rituels bien-être",
+            title: "Rituels bien-être",
+            description: "Expériences complètes alliant différents soins pour un bien-être holistique.",
+        },
+    ];
+
+    const displayedSpaCards = showAllSpa ? spaCards : spaCards.slice(0, 3);
+
+    //Services de conciergeries
+    const conciergeries = [
+        {
+            title: 'Concierge Personnalisé',
+            description: 'Bénéficiez de services sur mesure pour répondre à tous vos besoins durant votre séjour.',
+            imgSrc: '/img/conciergerie1.jpg',
+            alt: 'Concierge personnalisé'
+        },
+        {
+            title: 'Réservations Exclusives',
+            description: 'Laissez-nous organiser vos réservations dans les restaurants et événements exclusifs.',
+            imgSrc: '/img/conciergerie2.jpg',
+            alt: 'Réservations exclusives'
+        },
+        {
+            title: 'Transferts Privés',
+            description: 'Profitez de nos services de transfert privé pour vos déplacements en toute sérénité.',
+            imgSrc: '/img/conciergerie3.jpg',
+            alt: 'Transferts privés'
+        },
+        {
+            title: 'Billeterie',
+            description: 'Réservations de billets pour des spectacles, événements sportifs, ou concerts.',
+            imgSrc: '/img/conciergerie.jpg',
+            alt: 'Billetterie'
+        },
+        {
+            title: 'Assistance shopping',
+            description: 'Recommandations de boutiques de luxe et services de personnal shopper.',
+            imgSrc: '/img/conciergerie.jpg',
+            alt: 'Assistance shopping'
+        },
+        {
+            title: 'Excursions et visites guidées',
+            description: 'Planification de tours privés ou excursions locales.',
+            imgSrc: '/img/conciergerie.jpg',
+            alt: 'Excursions et visites guidées'
+        },
+    ];
+
+    const displayConciergerieCards = conciergeries.slice(0, showAllConciergerie ? conciergeries.length : 3);
 
     return (
         <div
@@ -88,39 +178,31 @@ const Services: React.FC = () => {
                         Nos concierges dévoués sont à votre disposition pour vous aider avec des services personnalisés.
                     </p>
                     <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mb-12 justify-center items-stretch">
-                        <div className="max-w-sm rounded-xl overflow-hidden shadow-lg bg-emerald-600 mx-auto 
+                        {displayConciergerieCards.map((service, index) => (
+                            <div key={index} className="max-w-sm rounded-xl overflow-hidden shadow-lg bg-emerald-600 mx-auto 
                         transform transition duration-300 ease-in-out hover:scale-105 hover:shadow-2xl cursor-pointer"
-                        >
-                            <img className="w-full h-64 object-cover" src="/img/conciergerie1.jpg" alt="Concierge personnalisé" />
-                            <div className="px-6 py-4">
-                                <div className="font-bold text-xl mb-2">Concierge Personnalisé</div>
-                                <p className="text-black text-base">
-                                    Bénéficiez de services sur mesure pour répondre à tous vos besoins durant votre séjour.
-                                </p>
+                            >
+                                <img className="w-full h-64 object-cover" src={service.imgSrc} alt={service.alt} />
+                                <div className="px-6 py-4">
+                                    <div className="font-bold text-xl mb-2">{service.title}</div>
+                                    <p className="text-black text-base">
+                                        {service.description}
+                                    </p>
+                                </div>
                             </div>
-                        </div>
-                        <div className="max-w-sm rounded-xl overflow-hidden shadow-lg bg-emerald-600 mx-auto 
-                        transform transition duration-300 ease-in-out hover:scale-105 hover:shadow-2xl cursor-pointer"
+                        ))}
+                    </div>
+
+                    <div className="text-center mb-12">
+                        <button
+                            className="inline-flex items-center px-6 py-3 border border-transparent 
+                        rounded-md shadow-sm text-base font-medium text-black hover:text-black bg-emerald-600 
+                        hover:bg-emerald-700 focus:outline -none focus:ring-2 focus:ring-offset-2 focus:ring-emerald-500"
+                            onClick={() => setShowAllConciergerie(!showAllConciergerie)}
                         >
-                            <img className="w-full h-64 object-cover" src="/img/conciergerie2.jpg" alt="Réservations exclusives" />
-                            <div className="px-6 py-4">
-                                <div className="font-bold text-xl mb-2">Réservations Exclusives</div>
-                                <p className="text-black text-base">
-                                    Laissez-nous organiser vos réservations dans les restaurants et événements exclusifs.
-                                </p>
-                            </div>
-                        </div>
-                        <div className="max-w-sm rounded-xl overflow-hidden shadow-lg bg-emerald-600 mx-auto 
-                        transform transition duration-300 ease-in-out hover:scale-105 hover:shadow-2xl cursor-pointer"
-                        >
-                            <img className="w-full h-64 object-cover" src="/img/conciergerie3.jpg" alt="Transferts privés" />
-                            <div className="px-6 py-4">
-                                <div className="font-bold text-xl mb-2">Transferts Privés</div>
-                                <p className="text-black text-base">
-                                    Profitez de nos services de transfert privé pour vos déplacements en toute sérénité.
-                                </p>
-                            </div>
-                        </div>
+                            {showAllConciergerie ? 'Montrer moins' : 'Montrer plus'}
+                            <HiArrowRight className={`ml-2 transition-transform ${showAllConciergerie ? '-rotate-90' : ''}`} />
+                        </button>
                     </div>
                 </div>
 
@@ -185,39 +267,31 @@ const Services: React.FC = () => {
                         Détendez-vous et revitalisez votre corps et votre esprit dans notre spa de luxe.
                     </p>
                     <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mb-12 justify-center items-stretch">
-                        <div className="max-w-sm rounded-xl overflow-hidden shadow-lg bg-emerald-600 mx-auto 
-                        transform transition duration-300 ease-in-out hover:scale-105 hover:shadow-2xl cursor-pointer"
-                        >
-                            <img className="w-full h-64 object-cover" src="/img/spa1.jpg" alt="Massage relaxant" />
-                            <div className="px-6 py-4">
-                                <div className="font-bold text-xl mb-2">Massage Relaxant</div>
-                                <p className="text-black text-base">
-                                    Évacuez le stress avec un massage apaisant offert par nos experts.
-                                </p>
+                        {displayedSpaCards.map((card, index) => (
+                            <div
+                                key={index}
+                                className="max-w-sm rounded-xl overflow-hidden shadow-lg bg-emerald-600 mx-auto 
+                            transform transition duration-300 ease-in-out hover:scale-105 hover:shadow-2xl cursor-pointer"
+                            >
+                                <img className="w-full h-64 object-cover" src={card.imgSrc} alt={card.alt} />
+                                <div className="px-6 py-4">
+                                    <div className="font-bold text-xl mb-2">{card.title}</div>
+                                    <p className="text-black text-base">{card.description}</p>
+                                </div>
                             </div>
-                        </div>
-                        <div className="max-w-sm rounded-xl overflow-hidden shadow-lg bg-emerald-600 mx-auto
-                        transform transition duration-300 ease-in-out hover:scale-105 hover:shadow-2xl cursor-pointer"
+                        ))}
+                    </div>
+
+                    <div className="text-center">
+                        <button
+                            onClick={() => setShowAllSpa(!showAllSpa)}
+                            className="inline-flex items-center px-6 py-3 border border-transparent 
+                            rounded-md shadow-sm text-base font-medium text-black hover:text-black bg-emerald-600 
+                            hover:bg-emerald-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-emerald-500"
                         >
-                            <img className="w-full h-64 object-cover" src="/img/spa2.jpg" alt="Soins du visage" />
-                            <div className="px-6 py-4">
-                                <div className="font-bold text-xl mb-2">Soins du Visage</div>
-                                <p className="text-black text-base">
-                                    Revitalisez votre peau avec nos traitements faciaux exclusifs.
-                                </p>
-                            </div>
-                        </div>
-                        <div className="max-w-sm rounded-xl overflow-hidden shadow-lg bg-emerald-600 mx-auto 
-                        transform transition duration-300 ease-in-out hover:scale-105 hover:shadow-2xl cursor-pointer"
-                        >
-                            <img className="w-full h-64 object-cover" src="/img/spa3.jpg" alt="Bains thermaux" />
-                            <div className="px-6 py-4">
-                                <div className="font-bold text-xl mb-2">Bains Thermaux</div>
-                                <p className="text-black text-base">
-                                    Plongez dans des bains thermaux pour une expérience de détente totale.
-                                </p>
-                            </div>
-                        </div>
+                            {showAllSpa ? "Afficher moins" : "Afficher plus"}
+                            <HiArrowRight className={`ml-2 transition-transform ${showAllSpa ? '-rotate-90' : ''}`} />
+                        </button>
                     </div>
                 </div>
 
@@ -268,7 +342,7 @@ const Services: React.FC = () => {
                 <div className="mb-12">
                     <h2 className="text-3xl font-bold text-emerald-400 mb-6 text-center">Autres Services</h2>
                     <p className="text-lg text-gray-300 mb-7">
-                    Découvrez notre service exclusif qui s'adapte à vos besoin, pour rendre votre séjour mémorable et sur mesure.
+                        Découvrez notre service exclusif qui s'adapte à vos besoin, pour rendre votre séjour mémorable et sur mesure.
                     </p>
                     <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mb-12 justify-center items-stretch">
                         {servicesAffiches.map((service, index) => (
