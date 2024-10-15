@@ -2,6 +2,7 @@ import React from 'react';
 import AboutPage from './pages/AboutPage';
 import AccueilPage from './pages/AccueilPage';
 import NavBar from './pages/Navbar';
+import ReservationsPage from './pages/ReservationsPage';
 import ServicesPage from './pages/ServicesPage';
 
 const App: React.FC = () => {
@@ -11,6 +12,7 @@ const App: React.FC = () => {
             <AccueilPage />
             <AboutPage />
             <ServicesPage />
+            <ReservationsPage />
         </div>
     );
 }
