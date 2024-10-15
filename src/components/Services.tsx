@@ -103,19 +103,19 @@ const Services: React.FC = () => {
         {
             title: 'Billeterie',
             description: 'Réservations de billets pour des spectacles, événements sportifs, ou concerts.',
-            imgSrc: '/img/conciergerie.jpg',
+            imgSrc: '/img/conciergerie4.jpg',
             alt: 'Billetterie'
         },
         {
             title: 'Assistance shopping',
             description: 'Recommandations de boutiques de luxe et services de personnal shopper, offrant une expérience de shopping sur mesure',
-            imgSrc: '/img/conciergerie.jpg',
+            imgSrc: '/img/conciergerie5.jpg',
             alt: 'Assistance shopping'
         },
         {
             title: 'Excursions et visites guidées',
             description: 'Planification de tours privés ou excursions locales, en personnalisant votre itinéraire selon vos intérêts et préférences.',
-            imgSrc: '/img/conciergerie.jpg',
+            imgSrc: '/img/conciergerie6.jpg',
             alt: 'Excursions et visites guidées'
         },
     ];
@@ -231,7 +231,7 @@ const Services: React.FC = () => {
                             <div className="px-6 py-4">
                                 <div className="font-bold text-xl mb-2">Buffet International</div>
                                 <p className="text-black text-base">
-                                    Une variété de plats internationaux pour satisfaire tous les goûts.
+                                    Une variété de plats internationaux pour satisfaire tous les goûts, le tout dans une ambiance conviviale et raffinée.
                                 </p>
                             </div>
                         </div>
@@ -242,7 +242,7 @@ const Services: React.FC = () => {
                             <div className="px-6 py-4">
                                 <div className="font-bold text-xl mb-2">Dîner Romantique</div>
                                 <p className="text-black text-base">
-                                    Un cadre intimiste avec une ambiance romantique pour un dîner en tête à tête.
+                                    Un cadre intimiste avec une ambiance romantique pour un dîner en tête à tête offrant une expérience inoubliable.
                                 </p>
                             </div>
                         </div>
