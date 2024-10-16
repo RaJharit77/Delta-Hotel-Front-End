@@ -18,7 +18,7 @@ function Contact() {
 
     const [submitStatus, setSubmitStatus] = useState<{ type: 'success' | 'error'; message: string } | null>(null);
 
-    const apiUrl = import.meta.env.VITE_REACT_APP_API_URL || 'http://localhost:5000';
+    const apiUrl = import.meta.env.VITE_REACT_APP_API_URL || 'https://delta-hotel-back-end.onrender.com';
 
     const handleChange = (e: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
         const { name, value } = e.target;

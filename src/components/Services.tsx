@@ -51,10 +51,12 @@ const Services: React.FC = () => {
     const [showAllSpa, setShowAllSpa] = useState(false);
     const [showAllConciergerie, setShowAllConciergerie] = useState(false);
 
+    const apiUrl = import.meta.env.VITE_REACT_APP_API_URL || 'https://delta-hotel-back-end.onrender.com';
+
     useEffect(() => {
         const fetchData = async () => {
             try {
-                const response = await fetch('http://localhost:5000/api/services');
+                const response = await fetch(`${apiUrl}/api/services`);
                 if (!response.ok) {
                     throw new Error('Erreur lors de la récupération des données');
                 }
