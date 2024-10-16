@@ -37,7 +37,7 @@ function HotelReservation() {
     const handleSubmit = async (e: FormEvent) => {
         e.preventDefault();
         try {
-            const response = await fetch(`${apiUrl}/api/reservation`, {
+            const response = await fetch(`${apiUrl}/api/reservations`, {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
