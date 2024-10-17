@@ -57,7 +57,7 @@ const NavigationBar: React.FC = () => {
                 <div className={`md:flex md:items-center ${menuOpen ? 'block ml-4' : 'hidden'} w-full md:w-auto mt-8 md:mt-0`}>
                     <div className="flex flex-col md:flex-row md:space-x-4 items-center">
                         <a
-                            href="#home"
+                            href="#accueil"
                             className="text-creme hover:text-or block py-2 px-4 text-center md:text-left relative after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-0 after:h-[2px] after:bg-or after:transition-all after:duration-300 hover:after:w-full"
                         >
                             Accueil
@@ -75,14 +75,14 @@ const NavigationBar: React.FC = () => {
                             Services
                         </a>
                         <a
-                            href="#contact"
+                            href="#contacts"
                             className="text-creme hover:text-or block py-2 px-4 text-center md:text-left relative after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-0 after:h-[2px] after:bg-or after:transition-all after:duration-300 hover:after:w-full"
                         >
                             Contact
                         </a>
 
                         <a
-                            href="#reservation"
+                            href="#reservations"
                             className="text-black bg-creme py-2 px-4 rounded hover:bg-or hover:text-black transition block text-center md:text-left mt-2 md:mt-0 relative glow-button"
                         >
                             Réservation

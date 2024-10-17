@@ -1,10 +1,10 @@
 import React from 'react';
 import AboutPage from './pages/AboutPage';
 import AccueilPage from './pages/AccueilPage';
-import ContactPage from './pages/ContactPage';
+import ContactsPage from './pages/ContactsPage';
 import Footer from './pages/Footer';
 import NavBar from './pages/Navbar';
-import ReservationPage from './pages/ReservationPage';
+import ReservationsPage from './pages/ReservationsPage';
 import ServicesPage from './pages/ServicesPage';
 
 const App: React.FC = () => {
@@ -14,8 +14,8 @@ const App: React.FC = () => {
             <AccueilPage />
             <AboutPage />
             <ServicesPage />
-            <ReservationPage />
-            <ContactPage />
+            <ReservationsPage />
+            <ContactsPage />
             <Footer />
         </div>
     );
