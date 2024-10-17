@@ -169,7 +169,7 @@ function Contact() {
                             </p>
                             <ul className="space-y-4">
                                 <li>
-                                    <span className="font-bold text-gray-900 dark:text-white">Adresse :</span> Rue de la Gastronomie, 101 Antananarivo Ville, Madagascar
+                                    <span className="font-bold text-gray-900 dark:text-white">Adresse :</span> Rue des Étoiles, 101 Antananarivo Ville, Madagascar
                                 </li>
                                 <li>
                                     <span className="font-bold text-gray-900 dark:text-white">Téléphones :</span> +261 034 00 000 00 ou +261 039 00 000 00
