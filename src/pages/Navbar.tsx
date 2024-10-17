@@ -20,7 +20,7 @@ const NavigationBar: React.FC = () => {
             }`}
         >
             <div className={`max-w-screen-xl mx-auto flex justify-between items-center p-4 ${menuOpen ? 'mt-10' : ''}`}>
-                <a href="#" className={`flex items-center ${menuOpen ? 'mt-4' : ''}`}>
+                <a href="https://delta-hotel-madagascar.onrender.com" className={`flex items-center ${menuOpen ? 'mt-4' : ''}`}>
                     <img 
                         src={logo} 
                         alt="Delta Hotel Logo" 

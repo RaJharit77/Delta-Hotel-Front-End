@@ -16,7 +16,7 @@ const Footer: React.FC = () => {
             <div className="container mx-auto flex flex-col sm:flex-row justify-between items-center">
                 <div className="flex flex-col items-center sm:items-start sm:ml-7 mb-2 sm:mb-0">
                     <a
-                        href="#"
+                        href="https://delta-hotel-madagascar.onrender.com"
                         className="w-24 h-24 rounded-full overflow-hidden mb-2"
                     >
                         <img
