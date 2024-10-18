@@ -27,7 +27,7 @@ function HotelReservation() {
     const [status, setStatus] = useState<string | null>(null);
     const [responseMessage, setResponseMessage] = useState<string>('');
 
-    const apiUrl = import.meta.env.VITE_REACT_APP_API_URL || 'https://delta-hotel-back-end.onrender.com';
+    const apiUrl = import.meta.env.VITE_REACT_APP_API_URL || import.meta.env.VITE_REACT_API || 'https://delta-hotel-back-end.onrender.com' || 'https://delta-hotel-back-end.vercel.app';
 
     const handleChange = (e: ChangeEvent<HTMLInputElement | HTMLSelectElement>) => {
         const { name, value } = e.target;
