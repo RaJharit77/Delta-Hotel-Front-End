@@ -190,7 +190,7 @@ const Services: React.FC = () => {
                     </div>
 
                     <div className="text-center mb-12">
-                        <a href="https://delta-restaurant-madagascar.onrender.com" target="_blank" rel="noopener noreferrer"
+                        <a href="https://delta-restaurant-madagascar.vercel.app" target="_blank" rel="noopener noreferrer"
                             className="inline-flex items-center px-6 py-3 border border-transparent 
                         rounded-md shadow-sm text-base font-medium text-black hover:text-black bg-emerald-600 
                         hover:bg-emerald-700 focus:outline -none focus:ring-2 focus:ring-offset-2 focus:ring-emerald-500"
