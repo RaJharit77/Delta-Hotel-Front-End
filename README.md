@@ -19,7 +19,13 @@ je n'ai jamais copié le nom de l'hôtel à Richmond, Canada mais je suis juste 
 nommé comme ça mais il n'a rien avoir avec le hôtel à Canada; j'ai juste une idéé en tête: "est-ce-que ce nom de l'hôtel que j'ai créé existe vraiment ?", pff!Puis il existe après avoir la recherche sur google xD. Or, j'ai juste emprunter leur carte à Richmond pour le contact car je n'ai pas encore un emplacement exacte pour l'hôtel à Madagascar et puis c'est juste une inspiration pour mon projet informatique :D.
 
 
-### Lien de déploiement du site sur render
+### Le Lien du déploiement du site sur render
 Voici le lien du site web déployé sur render(https://render.com): 
 
 delta hotel: https://delta-hotel-madagascar.onrender.com
+
+
+### Le Lien du déploiement du site sur render
+Voici le lien du site web déployé sur render(https://vercel.com): 
+
+delta hotel: https://delta-hotel-madagascar.vercel.app
