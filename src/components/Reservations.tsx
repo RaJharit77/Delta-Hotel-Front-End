@@ -145,6 +145,7 @@ function HotelReservation() {
                             }}
                             placeholderText="Date d'arrivée"
                             className="w-full pl-5 pr-60 py-2 border border-creme rounded-md bg-transparent text-white"
+                            dateFormat="dd/MM/yyyy"
                         />
                     </div>
 
@@ -162,6 +163,7 @@ function HotelReservation() {
                             }}
                             placeholderText="Date de départ"
                             className="w-full pl-5 pr-60 py-2 border border-creme rounded-md bg-transparent text-white"
+                            dateFormat="dd/MM/yyyy"
                         />
                     </div>
 
