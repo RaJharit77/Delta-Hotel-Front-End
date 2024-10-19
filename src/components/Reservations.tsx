@@ -136,9 +136,10 @@ function HotelReservation() {
                             selected={reservationData.checkIn ? new Date(reservationData.checkIn) : null}
                             onChange={(date: Date | null) => {
                                 if (date) {
+                                    const formattedDate = `${date.getDate()}/${date.getMonth() + 1}/${date.getFullYear()}`;
                                     setReservationData({
                                         ...reservationData,
-                                        checkIn: date.toLocaleDateString('fr-FR'),
+                                        checkIn: formattedDate,
                                     });
                                 }
                             }}
@@ -152,9 +153,10 @@ function HotelReservation() {
                             selected={reservationData.checkOut ? new Date(reservationData.checkOut) : null}
                             onChange={(date: Date | null) => {
                                 if (date) {
+                                    const formattedDate = `${date.getDate()}/${date.getMonth() + 1}/${date.getFullYear()}`;
                                     setReservationData({
                                         ...reservationData,
-                                        checkOut: date.toLocaleDateString('fr-FR'),
+                                        checkOut: formattedDate,
                                     });
                                 }
                             }}
