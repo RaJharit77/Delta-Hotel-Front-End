@@ -18,7 +18,7 @@ function Contact() {
 
     const [submitStatus, setSubmitStatus] = useState<{ type: 'success' | 'error'; message: string } | null>(null);
 
-    const apiUrl = import.meta.env.VITE_REACT_APP_API_URL || import.meta.env.VITE_REACT_API || 'https://delta-hotel-back-end.onrender.com' || 'https://delta-hotel-back-end.vercel.app';
+    const apiUrl = import.meta.env.VITE_REACT_APP_API_URL || import.meta.env.VITE_REACT_API_URL || 'https://delta-hotel-back-end.onrender.com' || 'https://delta-hotel-back-end.vercel.app';
 
     const handleChange = (e: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
         const { name, value } = e.target;
