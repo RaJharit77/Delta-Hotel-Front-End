@@ -136,7 +136,7 @@ function HotelReservation() {
                             selected={reservationData.checkIn ? new Date(reservationData.checkIn) : null}
                             onChange={(date: Date | null) => {
                                 if (date) {
-                                    const formattedDate = `${date.getDate().toString().padStart(2, '0')}/${(date.getMonth() + 1).toString().padStart(2, '0')}/${date.getFullYear()}`;
+                                    const formattedDate = date.toISOString().split('T')[0]; // Format ISO yyyy-mm-dd
                                     setReservationData({
                                         ...reservationData,
                                         checkIn: formattedDate,
@@ -153,7 +153,7 @@ function HotelReservation() {
                             selected={reservationData.checkOut ? new Date(reservationData.checkOut) : null}
                             onChange={(date: Date | null) => {
                                 if (date) {
-                                    const formattedDate = `${date.getDate().toString().padStart(2, '0')}/${(date.getMonth() + 1).toString().padStart(2, '0')}/${date.getFullYear()}`;
+                                    const formattedDate = date.toISOString().split('T')[0]; // Format ISO yyyy-mm-dd
                                     setReservationData({
                                         ...reservationData,
                                         checkOut: formattedDate,
