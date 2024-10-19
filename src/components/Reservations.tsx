@@ -78,7 +78,7 @@ function HotelReservation() {
         >
             <div className="absolute inset-0 bg-black opacity-70 z-0"></div>
 
-            <div className="relative z-10 bg-white bg-opacity-10 p-6 rounded-lg shadow-xl max-w-lg w-full my-20"> {/* Augmentez max-w-md à max-w-lg */}
+            <div className="relative z-10 bg-white bg-opacity-10 p-6 rounded-lg shadow-xl max-w-lg w-full my-20">
                 <h2 className="text-4xl font-bold mb-8 text-creme">Réservez votre Séjour</h2>
                 <p className="text-lg text-creme mb-4">
                     Remplissez le formulaire ci-dessous pour réserver une chambre dans notre hôtel de luxe.
@@ -138,7 +138,7 @@ function HotelReservation() {
                                 if (date) {
                                     setReservationData({
                                         ...reservationData,
-                                        checkIn: date.toISOString().split('T')[0],
+                                        checkIn: date.toLocaleDateString('fr-FR'),
                                     });
                                 }
                             }}
@@ -154,7 +154,7 @@ function HotelReservation() {
                                 if (date) {
                                     setReservationData({
                                         ...reservationData,
-                                        checkOut: date.toISOString().split('T')[0],
+                                        checkOut: date.toLocaleDateString('fr-FR'),
                                     });
                                 }
                             }}
