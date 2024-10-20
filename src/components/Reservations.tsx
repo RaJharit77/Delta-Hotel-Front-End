@@ -69,6 +69,17 @@ function HotelReservation() {
             console.error('Erreur lors de la réservation:', error);
             setStatus('error');
             setResponseMessage('Une erreur est survenue. Veuillez réessayer plus tard.');
+        } finally {
+            // Réinitialisation du formulaire après l'envoi (réussi ou échoué)
+            setReservationData({
+                fullName: '',
+                email: '',
+                phone: '',
+                checkIn: '',
+                checkOut: '',
+                roomType: '',
+                guests: '',
+            });
         }
     };
 
