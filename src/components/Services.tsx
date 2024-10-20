@@ -12,7 +12,7 @@ interface Chambre {
 
 //Autres services
 interface AutresServices {
-    img: string; 
+    img: string;
     titre: string;
     description: string;
 }
@@ -52,7 +52,7 @@ const Services: React.FC = () => {
     const [showAllConciergerie, setShowAllConciergerie] = useState(false);
 
     const apiUrl = import.meta.env.VITE_REACT_APP_API_URL || import.meta.env.VITE_REACT_API_URL || 'https://delta-hotel-back-end.onrender.com' || 'https://delta-hotel-back-end.vercel.app';
-    
+
     /*const apiUrl = "http://localhost:5000";*/
 
     useEffect(() => {
@@ -64,7 +64,7 @@ const Services: React.FC = () => {
                 }
                 const data: Data[] = await response.json(); // Notez que nous avons un tableau ici
                 console.log(data);
-                
+
                 if (data.length > 0) {
                     setHotelData(data[0]); // Accédez au premier élément
                 } else {
@@ -75,7 +75,7 @@ const Services: React.FC = () => {
             } finally {
                 setLoading(false);
             }
-        };        
+        };
 
         fetchData();
     }, []);
@@ -264,7 +264,7 @@ const Services: React.FC = () => {
                 {/* Autres services */}
                 <div className="mb-12">
                     <h2 className="text-3xl font-bold text-emerald-400 mb-6 text-center">Autres services</h2>
-                    <p className="text-lg text-gray-300 mb-7"> 
+                    <p className="text-lg text-gray-300 mb-7">
                         Découvrez notre service exclusif qui s'adapte à vos besoin, pour rendre votre séjour mémorable et sur mesure.
                     </p>
                     <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mb-12 justify-center items-stretch">
