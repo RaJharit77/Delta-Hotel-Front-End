@@ -51,7 +51,7 @@ const Services: React.FC = () => {
     const [showAllSpa, setShowAllSpa] = useState(false);
     const [showAllConciergerie, setShowAllConciergerie] = useState(false);
 
-    const apiUrl = import.meta.env.VITE_REACT_APP_API_URL || import.meta.env.VITE_REACT_API_URL || 'https://delta-hotel-back-end.onrender.com' || 'https://delta-hotel-back-end.vercel.app';
+    const apiUrl = import.meta.env.VITE_REACT_APP_API_URL || 'https://delta-hotel-back-end.vercel.app' || import.meta.env.VITE_REACT_API_URL || 'https://delta-hotel-back-end.onrender.com';
 
     /*const apiUrl = "http://localhost:5000";*/
 
