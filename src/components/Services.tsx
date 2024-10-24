@@ -62,11 +62,11 @@ const Services: React.FC = () => {
                 if (!response.ok) {
                     throw new Error('Erreur lors de la récupération des données');
                 }
-                const data: Data[] = await response.json(); // Notez que nous avons un tableau ici
+                const data: Data = await response.json(); // Notez que nous avons un tableau ici
                 console.log(data);
 
-                if (data.length > 0) {
-                    setHotelData(data[0]); // Accédez au premier élément
+                if (data.chambres && data.chambres.length > 0) {
+                    setHotelData(data);
                 } else {
                     throw new Error('Aucune donnée disponible');
                 }
