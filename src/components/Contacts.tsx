@@ -64,7 +64,7 @@ function Contact() {
 
     return (
         <div
-            id="contact"
+            id="contacts"
             className="relative py-16 bg-cover bg-center"
             style={{
                 backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('/img/contact.jpg')`,
@@ -165,11 +165,11 @@ function Contact() {
 
                     <div className="mt-12 lg:mt-0 lg:w-1/2 lg:pl-8">
                         <div className="bg-gray-800 bg-opacity-50 dark:bg-gray-800 dark:bg-opacity-50 shadow-lg rounded-lg p-8">
-                            <h3 className="text-lg font-bold text-gray-900 dark:text-white mb-4">Coordonnées</h3>
+                            <h3 className="text-lg font-bold text-white dark:text-white mb-4">Coordonnées</h3>
                             <p className="text-sm text-gray-200 dark:text-gray-200 mb-4">
                                 Vous pouvez également nous contacter directement à notre adresse ou par téléphone.
                             </p>
-                            <ul className="space-y-4">
+                            <ul className="space-y-4 text-white">
                                 <li>
                                     <span className="font-bold text-white dark:text-white">Adresse :</span> Rue de l'Élégance, 101 Antananarivo Ville, Madagascar
                                 </li>
