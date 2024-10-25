@@ -84,13 +84,13 @@ function Contact() {
                     <div className="lg:w-1/2 lg:pr-8">
                         <form onSubmit={handleSubmit} className="bg-gray-800 bg-opacity-50 dark:bg-gray-800 dark:bg-opacity-50 shadow-lg rounded-lg p-8">
                             <div className="mb-6">
-                                <label className="block text-sm font-medium text-gray-700 dark:text-gray-300">
+                                <label className="block text-sm font-medium text-gray-300 dark:text-gray-300">
                                     Nom et Prénoms
                                 </label>
                                 <input
                                     type="text"
                                     name="name"
-                                    className="mt-1 block bg-black w-full p-2 border border-gray-300 dark:border-gray-600 rounded-md shadow-sm dark:bg-gray-700 dark:text-gray-300 focus:outline-none focus:ring focus:border-emerald-600 text-white"
+                                    className="mt-1 block bg-gray-700 w-full p-2 border border-gray-300 dark:border-gray-600 rounded-md shadow-sm dark:bg-gray-700 dark:text-gray-300 focus:outline-none focus:ring focus:border-emerald-600 text-white"
                                     placeholder="Votre nom et prénoms"
                                     value={formData.name}
                                     onChange={handleChange}
@@ -98,13 +98,13 @@ function Contact() {
                                 />
                             </div>
                             <div className="mb-6">
-                                <label className="block text-sm font-medium text-gray-700 dark:text-gray-300">
+                                <label className="block text-sm font-medium text-gray-300 dark:text-gray-300">
                                     Email
                                 </label>
                                 <input
                                     type="email"
                                     name="email"
-                                    className="mt-1 block bg-black w-full p-2 border border-gray-300 dark:border-gray-600 rounded-md shadow-sm dark:bg-gray-700 dark:text-gray-300 focus:outline-none focus:ring focus:border-emerald-600 text-white"
+                                    className="mt-1 block bg-gray-700 w-full p-2 border border-gray-300 dark:border-gray-600 rounded-md shadow-sm dark:bg-gray-700 dark:text-gray-300 focus:outline-none focus:ring focus:border-emerald-600 text-white"
                                     placeholder="Votre email"
                                     value={formData.email}
                                     onChange={handleChange}
@@ -112,13 +112,13 @@ function Contact() {
                                 />
                             </div>
                             <div className="mb-6">
-                                <label className="block text-sm font-medium text-gray-700 dark:text-gray-300">
+                                <label className="block text-sm font-medium text-gray-300 dark:text-gray-300">
                                     Sujet
                                 </label>
                                 <input
                                     type="text"
                                     name="subject"
-                                    className="mt-1 block bg-black w-full p-2 border border-gray-300 dark:border-gray-600 rounded-md shadow-sm dark:bg-gray-700 dark:text-gray-300 focus:outline-none focus:ring focus:border-emerald-600 text-white"
+                                    className="mt-1 block bg-gray-700 w-full p-2 border border-gray-300 dark:border-gray-600 rounded-md shadow-sm dark:bg-gray-700 dark:text-gray-300 focus:outline-none focus:ring focus:border-emerald-600 text-white"
                                     placeholder="Sujet"
                                     value={formData.subject}
                                     onChange={handleChange}
@@ -126,13 +126,13 @@ function Contact() {
                                 />
                             </div>
                             <div className="mb-6">
-                                <label className="block text-sm font-medium text-gray-700 dark:text-gray-300">
+                                <label className="block text-sm font-medium text-gray-300 dark:text-gray-300">
                                     Message
                                 </label>
                                 <textarea
                                     name="message"
                                     rows={5}
-                                    className="mt-1 block bg-black w-full p-2 border border-gray-300 dark:border-gray-600 rounded-md shadow-sm dark:bg-gray-700 dark:text-gray-300 focus:outline-none focus:ring focus:border-emerald-600 text-white"
+                                    className="mt-1 block bg-gray-700 w-full p-2 border border-gray-300 dark:border-gray-600 rounded-md shadow-sm dark:bg-gray-700 dark:text-gray-300 focus:outline-none focus:ring focus:border-emerald-600 text-white"
                                     placeholder="Votre message..."
                                     value={formData.message}
                                     onChange={handleChange}
@@ -166,23 +166,23 @@ function Contact() {
                     <div className="mt-12 lg:mt-0 lg:w-1/2 lg:pl-8">
                         <div className="bg-gray-800 bg-opacity-50 dark:bg-gray-800 dark:bg-opacity-50 shadow-lg rounded-lg p-8">
                             <h3 className="text-lg font-bold text-gray-900 dark:text-white mb-4">Coordonnées</h3>
-                            <p className="text-sm text-gray-700 dark:text-gray-200 mb-4">
+                            <p className="text-sm text-gray-200 dark:text-gray-200 mb-4">
                                 Vous pouvez également nous contacter directement à notre adresse ou par téléphone.
                             </p>
                             <ul className="space-y-4">
                                 <li>
-                                    <span className="font-bold text-gray-900 dark:text-white">Adresse :</span> Rue de l'Élégance, 101 Antananarivo Ville, Madagascar
+                                    <span className="font-bold text-white dark:text-white">Adresse :</span> Rue de l'Élégance, 101 Antananarivo Ville, Madagascar
                                 </li>
                                 <li>
-                                    <span className="font-bold text-gray-900 dark:text-white">Téléphones :</span> +261 034 00 000 00 ou +261 039 00 000 00
+                                    <span className="font-bold text-white dark:text-white">Téléphones :</span> +261 034 00 000 00 ou +261 039 00 000 00
                                 </li>
                                 <li>
-                                    <span className="font-bold text-gray-900 dark:text-white">Email :</span> delta.hotel@gmail.com
+                                    <span className="font-bold text-white dark:text-white">Email :</span> delta.hotel@gmail.com
                                 </li>
                             </ul>
 
                             <div className="mt-8">
-                                <h4 className="text-lg font-bold text-gray-900 dark:text-white mb-4">Localisation</h4>
+                                <h4 className="text-lg font-bold text-white dark:text-white mb-4">Localisation</h4>
                                 <div className="relative h-64">
                                     <img
                                         src="/img/carte.png"
