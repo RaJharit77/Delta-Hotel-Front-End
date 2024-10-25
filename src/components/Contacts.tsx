@@ -71,8 +71,8 @@ function Contact() {
             }}
         >
             <div className="max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8">
-                <div className="lg:text-center">
-                    <h2 className="text-3xl leading-9 font-extrabold text-creme sm:text-4xl sm:leading-10">
+                <div className="lg:text-center text-center">
+                    <h2 className="text-3xl leading-9 font-extrabold text-creme sm:text-4xl sm:leading-10 lg:mx-auto">
                         Contactez-nous
                     </h2>
                     <p className="mt-4 max-w-2xl text-xl leading-7 text-gray-300 lg:mx-auto">
