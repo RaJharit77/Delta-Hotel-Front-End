@@ -82,7 +82,7 @@ function Contact() {
 
                 <div className="mt-12 lg:flex lg:justify-between lg:items-start">
                     <div className="lg:w-1/2 lg:pr-8">
-                        <form onSubmit={handleSubmit} className="bg-white bg-opacity-50 dark:bg-gray-800 dark:bg-opacity-50 shadow-lg rounded-lg p-8">
+                        <form onSubmit={handleSubmit} className="bg-gray-800 bg-opacity-50 dark:bg-gray-800 dark:bg-opacity-50 shadow-lg rounded-lg p-8">
                             <div className="mb-6">
                                 <label className="block text-sm font-medium text-gray-700 dark:text-gray-300">
                                     Nom et Prénoms
@@ -164,7 +164,7 @@ function Contact() {
                     </div>
 
                     <div className="mt-12 lg:mt-0 lg:w-1/2 lg:pl-8">
-                        <div className="bg-white bg-opacity-50 dark:bg-gray-800 dark:bg-opacity-50 shadow-lg rounded-lg p-8">
+                        <div className="bg-gray-800 bg-opacity-50 dark:bg-gray-800 dark:bg-opacity-50 shadow-lg rounded-lg p-8">
                             <h3 className="text-lg font-bold text-gray-900 dark:text-white mb-4">Coordonnées</h3>
                             <p className="text-sm text-gray-700 dark:text-gray-200 mb-4">
                                 Vous pouvez également nous contacter directement à notre adresse ou par téléphone.
