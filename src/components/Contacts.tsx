@@ -80,6 +80,7 @@ function Contact() {
                     </p>
                 </div>
 
+                {/**Formulaire de contacts*/}
                 <div className="mt-12 lg:flex lg:justify-between lg:items-start">
                     <div className="lg:w-1/2 lg:pr-8">
                         <form onSubmit={handleSubmit} className="bg-gray-800 bg-opacity-50 dark:bg-gray-800 dark:bg-opacity-50 shadow-lg rounded-lg p-8">
@@ -163,6 +164,7 @@ function Contact() {
                         </form>
                     </div>
 
+                    {/**Coordonnées*/}
                     <div className="mt-12 lg:mt-0 lg:w-1/2 lg:pl-8">
                         <div className="bg-gray-800 bg-opacity-50 dark:bg-gray-800 dark:bg-opacity-50 shadow-lg rounded-lg p-8">
                             <h3 className="text-lg font-bold text-white dark:text-white mb-4">Coordonnées</h3>
