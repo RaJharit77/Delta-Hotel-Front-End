@@ -15,9 +15,9 @@ const Notifications: React.FC = () => {
     if (!isVisible) return null;
 
     return (
-        <div className="fixed bottom-5 right-5 bg-gray-800 bg-opacity-85 shadow-lg rounded-lg p-4 w-80 border border-gray-600 z-50">
+        <div className="fixed bottom-5 right-5 bg-gray-900 bg-opacity-90 shadow-lg rounded-lg p-4 w-80 border border-gray-600 z-50">
             <p className="text-creme font-semibold text-lg text-left pt-2">Visitez notre restaurant !</p>
-            <p className="text-gray-300 mt-2 text-left">
+            <p className="text-gray-200 mt-2 text-left">
                 Découvrez une expérience culinaire unique, alliant saveurs authentiques et convivialité, pour un moment inoubliable.
             </p>
             <button
