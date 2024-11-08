@@ -1,5 +1,5 @@
 # Delta-Hotel-Front-End
-Ce projet est à propos de la restaurant nommé <mark>Delta Hotel®</mark> en utilisant <mark>Vite JS et React JS et aussi TypeScript(Vite JS + React JS + TS)</mark> comme outils pour le front-end de ce site.
+Ce projet est à propos de l'Hôtel nommé <mark>Delta Hotel®</mark> en utilisant <mark>Vite JS et React JS et aussi TypeScript(Vite JS + React JS + TS)</mark> comme outils pour le front-end de ce site.
 
 ### Description du projet
 Ceci est une repository pour l'interface utilisateur ou UI de mon projet personnel pendant une année de passage chez HEI(Haute École d'informatique).
