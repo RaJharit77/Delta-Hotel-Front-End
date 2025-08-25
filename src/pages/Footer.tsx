@@ -8,7 +8,7 @@ import {
 import { faEnvelope } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import React from 'react';
-import logo from '../../public/img/delta.png';
+import logo from '../assets/img/delta.png';
 
 const Footer: React.FC = () => {
     return (
