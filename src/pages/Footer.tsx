@@ -51,7 +51,7 @@ const Footer: React.FC = () => {
 
             <div className="w-full text-center bg-black py-2">
                 <p className="text-creme">
-                    &copy; {new Date().getFullYear()} Delta Hotel®. All rights reserved. Created by RaJharit77
+                    &copy; 2024 - {new Date().getFullYear()} Delta Hotel®. All rights reserved. Created by RaJharit77
                 </p>
             </div>
         </footer>
