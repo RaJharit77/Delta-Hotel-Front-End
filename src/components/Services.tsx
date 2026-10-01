@@ -1,45 +1,8 @@
 import React, { useEffect, useState } from 'react';
 import { HiArrowRight } from 'react-icons/hi';
 import backgroundImage from '../assets/img/services.jpg';
-
-// Interfaces pour les données des services de l'hôtel
-//Chambres
-interface Chambre {
-    img: string;
-    titre: string;
-    description: string;
-}
-
-//Autres services
-interface AutresServices {
-    img: string;
-    titre: string;
-    description: string;
-}
-
-//Spa et bien-être
-interface SpaCard {
-    img: string;
-    alt: string;
-    title: string;
-    description: string;
-}
-
-//Conciergerie
-interface Conciergerie {
-    title: string;
-    description: string;
-    imgSrc: string;
-    alt: string;
-}
-
-//Data
-interface Data {
-    chambres: Chambre[];
-    autresServices: AutresServices[];
-    spaCards: SpaCard[];
-    conciergeries: Conciergerie[];
-}
+import { apiUrl } from '../lib/api';
+import { Data } from '../lib/interface/services';
 
 const Services: React.FC = () => {
     const [hotelData, setHotelData] = useState<Data | null>(null);
@@ -50,10 +13,6 @@ const Services: React.FC = () => {
     const [showAllOtherServices, setShowAllOtherServices] = useState(false);
     const [showAllSpa, setShowAllSpa] = useState(false);
     const [showAllConciergerie, setShowAllConciergerie] = useState(false);
-
-    const apiUrl = import.meta.env.VITE_REACT_APP_API_URL || 'https://delta-hotel-back-end.vercel.app' || import.meta.env.VITE_REACT_API_URL || 'https://delta-hotel-back-end.onrender.com';
-
-    /*const apiUrl = "http://localhost:5000";*/
 
     useEffect(() => {
         const fetchData = async () => {

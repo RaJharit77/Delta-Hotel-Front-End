@@ -2,16 +2,8 @@ import { ChangeEvent, FormEvent, useState } from 'react';
 import DatePicker from 'react-datepicker';
 import 'react-datepicker/dist/react-datepicker.css';
 import { FaCheckCircle, FaTimesCircle } from 'react-icons/fa';
-
-interface ReservationData {
-    fullName: string;
-    email: string;
-    phone: string;
-    checkIn: string;
-    checkOut: string;
-    roomType: string;
-    guests: string;
-}
+import { apiUrl } from '../lib/api';
+import { ReservationData } from '../lib/interface/reservations';
 
 function HotelReservation() {
     const [reservationData, setReservationData] = useState<ReservationData>({
@@ -26,10 +18,6 @@ function HotelReservation() {
 
     const [status, setStatus] = useState<string | null>(null);
     const [responseMessage, setResponseMessage] = useState<string>('');
-
-    const apiUrl = import.meta.env.VITE_REACT_APP_API_URL || import.meta.env.VITE_REACT_API_URL || 'https://delta-hotel-back-end.onrender.com' || 'https://delta-hotel-back-end.vercel.app';
-
-    /*const apiUrl = "http://localhost:5000";*/
 
     const handleChange = (e: ChangeEvent<HTMLInputElement | HTMLSelectElement>) => {
         const { name, value } = e.target;

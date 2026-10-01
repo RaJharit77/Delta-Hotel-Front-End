@@ -1,12 +1,7 @@
 import { ChangeEvent, FormEvent, useState } from 'react';
 import { FaCheckCircle, FaTimesCircle } from 'react-icons/fa';
-
-interface FormData {
-    name: string;
-    email: string;
-    subject: string;
-    message: string;
-}
+import { apiUrl } from '../lib/api';
+import { FormData } from '../lib/interface/contacts';
 
 function Contact() {
     const [formData, setFormData] = useState<FormData>({
@@ -17,10 +12,6 @@ function Contact() {
     });
 
     const [submitStatus, setSubmitStatus] = useState<{ type: 'success' | 'error'; message: string } | null>(null);
-
-    const apiUrl = import.meta.env.VITE_REACT_APP_API_URL || import.meta.env.VITE_REACT_API_URL || 'https://delta-hotel-back-end.onrender.com' || 'https://delta-hotel-back-end.vercel.app';
-
-    /*const apiUrl="http://localhost:5000";*/
 
     const handleChange = (e: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
         const { name, value } = e.target;
